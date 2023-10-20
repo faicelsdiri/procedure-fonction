@@ -1,0 +1,27 @@
+ALGORITHM checkpoint1
+VAR
+tab1,tab2: ARRAY_OF INTEGER[5]; 
+i,j :INTEGER;
+som :INTEGER:=0;
+
+
+BEGIN
+//remplissage de tableau tab1 et tab2
+FOR i FROM 0 TO 5  DO
+write("donne un entier de tableu 1 ");
+read(tab1[i];);
+write("donne un entier de tableu 2 ");
+read(tab2[i];);
+END_FOR
+FOR i FROM 1 TO tab1.length  DO
+    FOR j FROM 1 TO tab2.length  DO
+         IF (tab1[i] = tab2[j] ) THEN
+write("la valeur de la case " , i ,"est présent aussi dans la tableau2"  );
+         ELSE
+write("la valeur de la case " , i ,"n  est pas  présent aussi dans la tableau2"  );
+som= tab1[i]; 
+         END_IF
+    END_FOR
+END_FOR
+
+ END

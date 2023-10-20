@@ -1,0 +1,39 @@
+//fonction de calcul somme
+FUNCTION dot_prod(v1,v2  : ARRAY_OF INTEGER[5], som:INTEGER) : INTEGER
+VAR
+j:INTEGER;
+BEGIN
+    FOR j FROM 1 TO v1.length   DO
+som := som + v1[j]*v2[j];
+    END_FOR
+    RETURN som ;
+END
+
+//debut de algorithme
+ALGORITHM checkopoint2_1
+VAR
+v1,v1: ARRAY_OF INTEGER[5]; 
+i :INTEGER;
+som :INTEGER:=0;  
+BEGIN
+
+//remplissage de tableau tab1 et tab2
+FOR i FROM 0 TO 5  DO
+write("donne un entier de tableu 1 ");
+read(v1[i];);
+write("donne un entier de tableu 2 ");
+read(v2[i];);
+END_FOR
+
+//affectation de resultat du fonction
+som:=dot_prod(v1,v2,som);
+
+//comparaison de somme 
+IF (som=0) THEN
+write("les deux vecteurs sont orthogonaux");
+ELSE
+write("les deux vecteurs ne sont pas orthogonaux");
+END_IF
+
+
+END
